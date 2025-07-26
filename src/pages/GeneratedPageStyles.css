@@ -1,0 +1,689 @@
+/* Enhanced GeneratedPageStyles.css - Page-Specific Styles and Animations */
+
+/* Page wrapper classes with enhanced styling */
+.education-page {
+  background: radial-gradient(ellipse at top, rgba(153, 41, 234, 0.1) 0%, transparent 70%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.education-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23991299' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.education-page .section {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.education-page .section:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.education-page .section:nth-child(even) {
+  animation-delay: 0.4s;
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.education-page .edu-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.education-page .edu-card::before {
+  content: '🎓';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.1;
+  transition: var(--transition-medium);
+}
+
+.education-page .edu-card:hover::before {
+  opacity: 0.3;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Timeline Effect for Education Page */
+.education-page .section {
+  position: relative;
+  margin-left: 40px;
+}
+
+.education-page .section::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  background: var(--color-purple-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(153, 41, 234, 0.5);
+  z-index: 2;
+}
+
+.education-page .section::after {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 45px;
+  width: 1px;
+  height: calc(100% + 40px);
+  background: linear-gradient(180deg, var(--color-purple-primary), transparent);
+  z-index: 1;
+}
+
+.education-page .section:last-child::after {
+  display: none;
+}
+
+.home-page {
+  background: radial-gradient(ellipse at center, rgba(204, 102, 218, 0.08) 0%, transparent 70%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(153, 41, 234, 0.03), transparent, rgba(204, 102, 218, 0.03), transparent);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.home-page .section {
+  animation: fadeInScale 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.home-page .section:nth-child(1) { animation-delay: 0.1s; }
+.home-page .section:nth-child(2) { animation-delay: 0.2s; }
+.home-page .section:nth-child(3) { animation-delay: 0.3s; }
+.home-page .section:nth-child(4) { animation-delay: 0.4s; }
+.home-page .section:nth-child(5) { animation-delay: 0.5s; }
+
+.home-page .bio-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page .bio-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(250, 235, 146, 0.1) 0%, transparent 70%);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.home-page .skills-section .skill-card:hover {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3) translateY(-8px);
+  }
+  50% {
+    transform: scale(1.05) translateY(-8px);
+  }
+  70% {
+    transform: scale(0.9) translateY(-8px);
+  }
+  100% {
+    transform: scale(1.05) translateY(-8px);
+  }
+}
+
+.projects-page {
+  background: radial-gradient(ellipse at bottom, rgba(250, 235, 146, 0.1) 0%, transparent 70%);
+  position: relative;
+}
+
+.projects-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(153, 41, 234, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(204, 102, 218, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.projects-page .section {
+  animation: slideInBottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes slideInBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-page .proj-card {
+  position: relative;
+  transition: var(--transition-medium);
+}
+
+.projects-page .proj-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(153, 41, 234, 0.1), rgba(204, 102, 218, 0.1));
+  opacity: 0;
+  transition: var(--transition-medium);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.projects-page .proj-card:hover::before {
+  opacity: 1;
+}
+
+.projects-page .proj-card:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 
+    0 25px 50px rgba(153, 41, 234, 0.3),
+    0 0 50px rgba(204, 102, 218, 0.2);
+}
+
+/* Project Card Grid Layout for Projects Page */
+.projects-page .proj-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 0;
+}
+
+.projects-page .proj-card {
+  flex: none;
+  animation: flipInY 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: rotateY(-90deg);
+}
+
+@keyframes flipInY {
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+.projects-page .proj-card:nth-child(1) { animation-delay: 0.1s; }
+.projects-page .proj-card:nth-child(2) { animation-delay: 0.2s; }
+.projects-page .proj-card:nth-child(3) { animation-delay: 0.3s; }
+.projects-page .proj-card:nth-child(4) { animation-delay: 0.4s; }
+
+.skills-page {
+  background: radial-gradient(ellipse at top left, rgba(153, 41, 234, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom right, rgba(204, 102, 218, 0.08) 0%, transparent 50%);
+  position: relative;
+}
+
+.skills-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23CC66DA' fill-opacity='0.02'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.skills-page .section {
+  animation: zoomIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skills-page .skills-grid {
+  position: relative;
+}
+
+.skills-page .skill-card {
+  animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skills-page .skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skills-page .skill-card:nth-child(2) { animation-delay: 0.15s; }
+.skills-page .skill-card:nth-child(3) { animation-delay: 0.2s; }
+.skills-page .skill-card:nth-child(4) { animation-delay: 0.25s; }
+.skills-page .skill-card:nth-child(5) { animation-delay: 0.3s; }
+.skills-page .skill-card:nth-child(6) { animation-delay: 0.35s; }
+.skills-page .skill-card:nth-child(7) { animation-delay: 0.4s; }
+.skills-page .skill-card:nth-child(8) { animation-delay: 0.45s; }
+
+.skills-page .skill-card:hover {
+  animation: wiggle 0.8s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: translateY(-8px) scale(1.05) rotate(0deg); }
+  25% { transform: translateY(-8px) scale(1.05) rotate(-2deg); }
+  75% { transform: translateY(-8px) scale(1.05) rotate(2deg); }
+}
+
+/* Skill Progress Bars */
+.skills-page .skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-page .skill-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--skill-level, 80%);
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-yellow-accent), rgba(250, 235, 146, 0.5));
+  transform: translateX(-100%);
+  transition: transform 1s ease-out 0.5s;
+}
+
+.skills-page .skill-card.animate::after {
+  transform: translateX(0);
+}
+
+/* Tech Stack Enhancements for Skills Page */
+.skills-page .tech-icon {
+  position: relative;
+}
+
+.skills-page .tech-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 16px;
+  background: linear-gradient(45deg, var(--color-purple-primary), var(--color-purple-secondary), var(--color-yellow-accent), var(--color-purple-primary));
+  background-size: 300% 300%;
+  opacity: 0;
+  z-index: -1;
+  animation: shimmer 3s ease-in-out infinite;
+  transition: opacity var(--transition-medium);
+}
+
+.skills-page .tech-icon:hover::after {
+  opacity: 0.3;
+}
+
+/* Page Transition Effects */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+/* Scroll-triggered Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax Effects */
+.parallax-element {
+  transform: translateY(var(--parallax-offset, 0));
+  transition: transform 0.1s ease-out;
+}
+
+/* Enhanced CTA Sections for Each Page */
+.page-cta {
+  background: linear-gradient(135deg, var(--color-card-bg), rgba(153, 41, 234, 0.1));
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin: 60px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg at 50% 50%, var(--color-purple-primary), var(--color-purple-secondary), var(--color-yellow-accent), var(--color-purple-primary));
+  opacity: 0.1;
+  animation: rotate 10s linear infinite;
+  pointer-events: none;
+}
+
+.page-cta h3 {
+  color: var(--color-purple-secondary);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--color-purple-primary), var(--color-purple-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-cta p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design for Pages */
+@media screen and (max-width: 768px) {
+  .education-page .section {
+    margin-left: 20px;
+  }
+  
+  .education-page .section::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .education-page .section::after {
+    left: -11px;
+  }
+  
+  .projects-page .proj-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .page-cta {
+    padding: 24px;
+    margin: 40px 0 24px;
+  }
+  
+  .page-cta h3 {
+    font-size: 1.6rem;
+  }
+  
+  .page-cta p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-page::before,
+  .education-page::before,
+  .projects-page::before,
+  .skills-page::before {
+    animation-duration: 30s; /* Slower animations on mobile */
+  }
+  
+  .education-page .section {
+    margin-left: 0;
+  }
+  
+  .education-page .section::before,
+  .education-page .section::after {
+    display: none; /* Remove timeline on very small screens */
+  }
+  
+  .page-cta h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Dark Mode Toggle Support */
+@media (prefers-color-scheme: light) {
+  .education-page,
+  .home-page,
+  .projects-page,
+  .skills-page {
+    /* Maintain dark theme regardless of system preference */
+    color-scheme: dark;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .education-page::before,
+  .home-page::before,
+  .projects-page::before,
+  .skills-page::before,
+  .page-cta::before {
+    display: none;
+  }
+  
+  .education-page .section,
+  .home-page .section,
+  .projects-page .section,
+  .skills-page .section {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .page-cta {
+    background: none;
+    border: 1px solid #333;
+  }
+}
+
+/* Enhanced Focus States for Better Accessibility */
+.education-page .edu-card:focus,
+.projects-page .proj-card:focus,
+.skills-page .skill-card:focus,
+.skills-page .tech-icon:focus {
+  outline: 3px solid var(--color-yellow-accent);
+  outline-offset: 4px;
+  border-color: var(--color-purple-primary);
+}
+
+/* Scroll Snap for Better UX */
+.projects-page .proj-cards {
+  scroll-snap-type: x mandatory;
+}
+
+.projects-page .proj-card {
+  scroll-snap-align: start;
+}
+
+/* Loading State for Pages */
+.page-loading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-loading::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--color-surface);
+  border-top: 4px solid var(--color-purple-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Intersection Observer Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Performance Optimizations */
+.education-page *,
+.home-page *,
+.projects-page *,
+.skills-page * {
+  will-change: transform, opacity;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for pages */
+.education-page::-webkit-scrollbar,
+.home-page::-webkit-scrollbar,
+.projects-page::-webkit-scrollbar,
+.skills-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.education-page::-webkit-scrollbar-track,
+.home-page::-webkit-scrollbar-track,
+.projects-page::-webkit-scrollbar-track,
+.skills-page::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+.education-page::-webkit-scrollbar-thumb,
+.home-page::-webkit-scrollbar-thumb,
+.projects-page::-webkit-scrollbar-thumb,
+.skills-page::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-purple-primary), var(--color-purple-secondary));
+  border-radius: 4px;
+}
+
+.education-page::-webkit-scrollbar-thumb:hover,
+.home-page::-webkit-scrollbar-thumb:hover,
+.projects-page::-webkit-scrollbar-thumb:hover,
+.skills-page::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-purple-secondary), var(--color-yellow-accent));
+}
