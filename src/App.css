@@ -1,0 +1,156 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #6a82fb 0%, #fc5c7d 100%);
+  margin: 0;
+  color: #222;
+}
+.App {
+  max-width: 960px;
+  margin: auto;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(80,80,120,0.13);
+}
+nav.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  background: rgba(245,245,255,0.7);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav.navbar a {
+  color: #6a82fb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav.navbar a:hover {
+  color: #fc5c7d;
+}
+.section {
+  margin-bottom: 42px;
+  padding: 20px 6px;
+  border-radius: 24px;
+  background: rgba(245,248,255,0.65);
+  box-shadow: 0 2px 8px rgba(120,130,200,0.08);
+}
+.bio-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(80,60,200,0.13);
+}
+.intro {
+  flex: 1;
+}
+.hobbies ul {
+  list-style: square inside;
+  padding: 0;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-card {
+  background: #6a82fb;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin: 4px 0;
+  transition: background 0.2s;
+}
+.skill-card:hover {
+  background: #fc5c7d;
+}
+.languages-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.language-badge {
+  background: #fc5c7d;
+  color: #fff;
+  border-radius: 12px;
+  padding: 7px 14px;
+}
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.tech-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 7px;
+  background: #eae8ff;
+  padding: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.edu-card {
+  margin-bottom: 22px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #ecefff;
+  box-shadow: 0 1px 6px rgba(110,110,150,0.07);
+}
+.edu-dates {
+  font-size: 0.96em;
+  margin-left: 8px;
+  color: #888;
+}
+.hackathon-cards, .proj-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.hack-card, .proj-card {
+  background: #fff;
+  border: 1.3px solid #cfd7ff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(100, 130, 210, 0.06);
+  padding: 15px 16px;
+  width: 300px;
+}
+.hack-card:hover, .proj-card:hover {
+  border-color: #fc5c7d;
+  cursor: pointer;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  margin-bottom: 10px;
+}
+.contact-icon {
+  vertical-align: middle;
+  width: 24px;
+  margin-right: 10px;
+}
+footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.95em;
+  color: #888;
+}
+
+@media screen and (max-width: 700px) {
+  .App { padding: 7px; }
+  .section { padding: 8px 2px; }
+  .bio-container { flex-direction: column; align-items: center; }
+  .profile-pic { width: 88px; height: 88px; }
+  .hack-card, .proj-card { width: 94vw; }
+}
