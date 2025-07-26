@@ -1,9 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# generate a readme.md file for the project to put on github
-
-Certainly! Here’s a **README.md** file tailored to your React + Vite portfolio project. It highlights your features, installation steps, tech stack, and how to customize content. You can copy this directly to your project root as **README.md**.
-
 # Tarun Srikumar – Portfolio Website
 
 A modern, responsive portfolio website built with **React + Vite**
