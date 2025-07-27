@@ -41,9 +41,9 @@ export default function HackathonSection() {
     <section className="section hackathon-section" id="hackathon-wins">
       <h2>🏆 Hackathon Wins</h2>
       <div className="hackathon-cards">
-        <EncryptID />
-        <VashishtFlagship />
         <VashishtAIAnalytics />
+        <VashishtFlagship />
+        <EncryptID />
       </div>
     </section>
   );
