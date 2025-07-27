@@ -37,14 +37,6 @@ export default function ContactSection() {
 
   const contactItems = [
     {
-      id: 'phone',
-      icon: '📞',
-      label: 'Phone',
-      value: '(+91) 9087744578',
-      href: 'tel:+919087744578',
-      copyText: '+919087744578'
-    },
-    {
       id: 'email',
       icon: '✉️',
       label: 'Email',

@@ -29,11 +29,12 @@ import libgdx from '../assets/tech/libgdx.png';
 import figma from '../assets/tech/figma.svg';
 import linux from '../assets/tech/linux.svg';
 import firebase from '../assets/tech/firebase.svg';
+import powerBI from '../assets/tech/powerBI.svg';
 
 const languages = [
   {name:"Python", icon:python}, {name:"C", icon:c}, {name:"C++", icon:cpp},
-  {name:"HTML", icon:html}, {name:"CSS", icon:css}, {name:"JavaScript", icon:js},
-  {name:"Java", icon:java}, {name:"R", icon:r}, {name:"Matlab", icon:matlab},
+  {name:"JavaScript", icon:js},
+  {name:"Java", icon:java}, {name:"R", icon:r},
   {name:"Assembly", icon:asm}, {name:"SQLite", icon:sql}
 ];
 
@@ -45,16 +46,13 @@ const frameworks = [
   {name: "ElectronJS", icon: electronjs},
   {name: "Axios", icon: axios},
   {name: "Postman", icon: postman},
-  {name: "Numpy", icon: numpy},
-  {name: "Pandas", icon: pandas},
-  {name: "Tableau", icon: tableau},
+  {name: "PowerBI", icon: powerBI},
   {name: "Tensorflow", icon: tensorflow},
   {name: "pyTorch", icon: pytorch},
   {name: "OpenCV", icon: opencv},
   {name: "Sklearn", icon: sklearn},
   {name: "Socket.io", icon: socketio},
   {name: "LibGDX", icon: libgdx},
-  {name: "Figma", icon: figma},
   {name: "Linux", icon: linux},
   {name: "Firebase", icon: firebase}
 ];
