@@ -97,6 +97,20 @@
 #tech-stack .tech-icon {
   animation: fadeInUp 0.5s ease-out forwards;
   opacity: 0;
+  background: linear-gradient(135deg, var(--color-purple-primary), var(--color-yellow-accent));
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: var(--transition-medium);
+}
+
+#tech-stack .tech-icon:hover {
+  transform: translateY(-8px) rotate(5deg);
+  box-shadow: 0 15px 40px rgba(153, 41, 234, 0.3);
+  border-color: var(--color-purple-primary);
+  animation: glow 2s infinite;
 }
 
 #tech-stack .tech-icon:nth-child(1) { animation-delay: 0.1s; }

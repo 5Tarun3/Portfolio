@@ -6,12 +6,12 @@ export default function ExtracurricularSection() {
       <h2>🏅 Extracurricular Activities</h2>
       <ul>
         <li>
-          <b>Data Science Co-Lead, IEEERAS Student Chapter, VITC</b><br />
+          <b>Data Science Lead, IEEERAS Student Chapter, VITC</b><br />
           Led and managed department of 50 members; directed contributions and projects.
         </li>
         <li>
-          <b>Master of Ceremonies, Mission: Data Impossible (IEEERAS)</b><br />
-          Hosted cryptic treasure hunt and machine learning competition.
+          <b>Master of Ceremonies, Mission: Data Impossible (IEEERAS + OSPC)</b><br />
+          Hosted an online crypthunt combined with machine learning competition.
         </li>
       </ul>
     </section>

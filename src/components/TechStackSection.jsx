@@ -28,6 +28,7 @@ import socketio from '../assets/tech/socketdotio.svg';
 import libgdx from '../assets/tech/libgdx.png';
 import figma from '../assets/tech/figma.svg';
 import linux from '../assets/tech/linux.svg';
+import firebase from '../assets/tech/firebase.svg';
 
 const languages = [
   {name:"Python", icon:python}, {name:"C", icon:c}, {name:"C++", icon:cpp},
@@ -54,8 +55,10 @@ const frameworks = [
   {name: "Socket.io", icon: socketio},
   {name: "LibGDX", icon: libgdx},
   {name: "Figma", icon: figma},
-  {name: "Linux", icon: linux}
+  {name: "Linux", icon: linux},
+  {name: "Firebase", icon: firebase}
 ];
+
 
 export default function TechStackSection() {
   return (
